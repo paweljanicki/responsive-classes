@@ -1,7 +1,11 @@
+module.exports = responsiveClasses;
+
 var breakpoints = {
+  xs: 544,
   sm: 767,
-  md: 1199,
-  lg: 10000
+  md: 992,
+  lg: 1199,
+  xl: 10000
 };
 
 var availableClasses = [];
@@ -15,11 +19,19 @@ function responsiveClasses(configBreakpoints, helperClasses) {
 
   formatBreakpoints();
 
-  addClasses(window.innerWidth, helperClasses);
+  addClasses(document.body.clientWidth, helperClasses);
 
-  window.addEventListener('resize', function(event) {
-    addClasses(event.target.innerWidth, helperClasses);
-  });
+  window.addEventListener("resize", resizeThrottler, false);
+
+  function resizeThrottler() {
+    var resizeTimeout;
+    if ( !resizeTimeout ) {
+      resizeTimeout = setTimeout(function() {
+        addClasses(document.body.clientWidth, helperClasses)
+        resizeTimeout = null;
+       }, 66);
+    }
+  }
 }
 
 function validateBreakpoints(configBreakpoints) {
@@ -104,6 +116,8 @@ function addClasses(windowWidth, helperClasses) {
     return (breakpoint.minWidth < windowWidth && breakpoint.maxWidth >= windowWidth);
   }).name
 
-  document.body.classList.remove(...availableClasses);
+  availableClasses.forEach(function(availableClass) {
+    document.body.classList.remove(availableClass);
+  });
   document.body.classList.add(className);
 }
