@@ -5,9 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Responsive classes demo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <script src="../index.js"></script>
+  <div class="container">
+    <h1 class="title">
+      <span class="title--name">responsive-classes</span>
+    </h1>
+    <p class="current">
+      Current classes: 
+      <span id="current-classes"></span>
+    </p>
+    <pre>
+      <code id="breakpoints">
+        {
+          xs: 480,
+          sm: 767,
+          md: 992,
+          lg: 1199,
+          xl: 10000
+        }
+      </code>
+    </pre>
+    <div class="item">Always 100%</div>
+    <div class="item item--small">100% on .xs and .sm</div>
+    <div class="item item--medium">100% on .xs .sm and .md</div>
+  </div>
+  <script src="../responsive-classes.min.js"></script>
   <script src="./index.js"></script>
 </body>
 </html>

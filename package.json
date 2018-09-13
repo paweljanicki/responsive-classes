@@ -2,9 +2,9 @@
   "name": "responsive-classes",
   "version": "0.0.1",
   "description": "Adds responsive classes to <body>",
-  "main": "index.js",
+  "main": "responsive-classes.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "uglify": "uglifyjs responsive-classes.js --compress --mangle --output=responsive-classes.min.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/PawelJanicki/responsive-classes/issues"
   },
-  "homepage": "https://github.com/PawelJanicki/responsive-classes#readme"
+  "homepage": "https://github.com/PawelJanicki/responsive-classes#readme",
+  "devDependencies": {
+    "uglify-js": "^3.4.7"
+  }
 }

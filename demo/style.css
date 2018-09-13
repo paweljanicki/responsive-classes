@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #282828;
+  background: #f7f7f7;
+}
+
+.title {
+  text-align: center;
+}
+
+.title--name {
+  color: #000;
+}
+
+.current {
+  margin: 0;
+  font-size: 24px;
+}
+
+pre {
+  margin: 0;
+}
+
+code {
+  font-size: 24px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.item {
+  display: flex;
+  height: 100px;
+  padding-left: 40px;
+  align-items: center;
+  margin-bottom: 20px;
+  background: #fff;
+  -webkit-box-shadow: 0px 1px 3px -1px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 1px 3px -1px rgba(0,0,0,0.5);
+  box-shadow: 0px 1px 3px -1px rgba(0,0,0,0.5);
+
+}
+
+.md-up .item--small {
+  width: 50%;
+}
+
+.lg-up .item--medium {
+  width: 50%;
+}
