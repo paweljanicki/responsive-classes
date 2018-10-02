@@ -1,6 +1,6 @@
 {
   "name": "responsive-classes",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Adds responsive classes to <body>",
   "main": "responsive-classes.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PawelJanicki/responsive-classes.git"
+    "url": "git+https://github.com/pauljson/responsive-classes.git"
   },
   "keywords": [
     "Responsive",
@@ -17,9 +17,9 @@
   "author": "Pawel Janicki",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PawelJanicki/responsive-classes/issues"
+    "url": "https://github.com/pauljson/responsive-classes/issues"
   },
-  "homepage": "https://github.com/PawelJanicki/responsive-classes#readme",
+  "homepage": "https://github.com/pauljson/responsive-classes#readme",
   "devDependencies": {
     "uglify-js": "^3.4.7"
   }

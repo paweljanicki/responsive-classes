@@ -74,25 +74,30 @@
   }
 
   function addClasses(windowWidth, helperClasses) {
-    var className = breakpoints.find(function(breakpoint) {
-      return (breakpoint.minWidth < windowWidth && breakpoint.maxWidth >= windowWidth);
-    }).name;
+    var className;
+    // cannot use find method because IE11 doesn't support it
+    breakpoints.forEach(function(breakpoint) {
+      if (breakpoint.minWidth < windowWidth && breakpoint.maxWidth >= windowWidth) {
+        className = breakpoint.name;
+      }
+    });
     
     if (helperClasses) {
       // remove all helper classes currently added to the body
-      document.body.classList.forEach(function(className) {
-        if (className.indexOf('-up') || className.indexOf('-down')) {
-          document.body.classList.remove(className);
+      for (var index = 0; index < document.body.classList.length; index++) {
+        var currentClass = document.body.classList[index];
+        if (currentClass.indexOf('-up') > -1|| currentClass.indexOf('-down') > -1) {
+          document.body.classList.remove(currentClass);
         }
-      });
+      }
       
       // prepers new helper classes and adds them to the body
       buildHelperClasses(breakpoints, windowWidth);
     }
 
     // IE support
-    availableClasses.forEach(function(className) {
-      document.body.classList.remove(className);
+    availableClasses.forEach(function(currentClass) {
+      document.body.classList.remove(currentClass);
     });
     document.body.classList.add(className);
   }

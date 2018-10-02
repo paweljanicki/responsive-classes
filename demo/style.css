@@ -45,6 +45,10 @@ code {
 
 }
 
+.sm-up .item--very-small {
+  width: 50%;
+}
+
 .md-up .item--small {
   width: 50%;
 }

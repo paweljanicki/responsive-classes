@@ -1,6 +1,6 @@
 # responsive-classes
 A Vanilla JS library that adds classes to the `<body>` which can be used to apply responsive styles.
-It is lightweight (641B minified and gzipped), has no dependencies and is documented with comments. Check out `responsive-classes.js` file.
+It is lightweight (673B minified and gzipped), has no dependencies and is documented with comments. Check out `responsive-classes.js` file.
 
 ## Dafault breakpoints:
 | Class name | Maximum width  |
@@ -67,8 +67,19 @@ You will get the following classes:
 
 Screen width values in the table above are used only for presentation
 
+## Browser support
+responsive-classes should work on all modern web browsers including IE11 and mobile browsers
+Tested on:
+- IE11
+- Safari 11
+- New Edge
+- New Firefox
+- New Chrome
+- Mobile Chrome
+- Mobile Safari
+
 ## About
-I was inspired by this [article](https://medium.com/@kelin2025/writing-js-libraries-less-than-1tb-size-6342da0c006a) on writing nano libraries in JavaScript. The code is written in Vanilla JS and has no dependencies. It's not only lightweight (641B minified and gzipped), but it also has a clean interface, extensive validation and is well documented with comments.
+I was inspired by this [article](https://medium.com/@kelin2025/writing-js-libraries-less-than-1tb-size-6342da0c006a) on writing nano libraries in JavaScript. The code is written in Vanilla JS and has no dependencies. It's not only lightweight (673B minified and gzipped), but it also has a clean interface, extensive validation and is well documented with comments.
 
 ## License
 MIT
