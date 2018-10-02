@@ -1,6 +1,6 @@
 {
   "name": "responsive-classes",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "Adds responsive classes to <body>",
   "main": "responsive-classes.js",
   "scripts": {
